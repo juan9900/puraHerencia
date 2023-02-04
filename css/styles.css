@@ -98,9 +98,8 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  left: 0;
-  bottom: 0;
-  padding: 2rem 3rem;
+  left: 3%;
+  bottom: 8%;
   color: var(--offWhite);
   font-family: "Garet Book";
   font-size: 1.2em;
@@ -123,9 +122,21 @@ body {
   height: 100%;
 }
 
+footer {
+  background-color: #0e0e0e;
+
+  color: var(--offWhite);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-top: 2rem;
+  position: relative;
+  font-family: "Garet Book";
+}
+
 @media screen and (max-width: 600px) {
   body {
-    padding: 0 1rem;
+    justify-content: space-between;
   }
   .logo {
     width: 50%;
@@ -136,7 +147,7 @@ body {
 
   .main-text {
     font-size: 1.5em;
-    margin: 1rem auto;
+    margin: 1rem 1rem;
     text-align: center;
   }
 
@@ -145,13 +156,28 @@ body {
     letter-spacing: 1px;
     line-height: 35px;
     flex-grow: 0;
+    margin: 0 1rem;
   }
 
-  .socials {
-    position: static;
+  .secondary-text span {
+    display: block;
+    line-height: 25px;
+    margin-top: 0.8rem;
   }
 
   .building {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+  footer {
+    margin-top: 0;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .socials {
+    position: static;
+    margin: 1.5rem 0;
   }
 }
