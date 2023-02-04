@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Sumac Regular"; /*a name to be used later*/
+  src: url("../assets/fonts/Sumac\ Regular.otf"); /*URL to font*/
+}
+
+@font-face {
+  font-family: "CervoNeue Medium"; /*a name to be used later*/
+  src: url("../assets/fonts/Typoforge\ Studio\ -\ CervoNeue-MediumNeue.otf"); /*URL to font*/
+}
+
+@font-face {
+  font-family: "CervoNeue Medium Italic"; /*a name to be used later*/
+  src: url("../assets/fonts/Typoforge\ Studio\ -\ CervoNeue-MediumNeueItalic.otf"); /*URL to font*/
+}
+
+@font-face {
+  font-family: "CervoNeue Regular"; /*a name to be used later*/
+  src: url("../assets/fonts/Typoforge\ Studio\ -\ CervoNeue-RegularNeue.otf"); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Garet Book"; /*a name to be used later*/
+  src: url("../assets/fonts/GARET-BOOK.TTF"); /*URL to font*/
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #a4343a;
+  --offWhite: #d9d9d9;
+}
+
+body {
+  height: 100vh;
+  background: url("/assets/img/FONDO.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  height: 35%;
+  flex-grow: 1;
+  padding-top: 1.5rem;
+}
+
+.main-text {
+  background-color: var(--primary);
+  padding: 0.3rem 2rem;
+  color: var(--offWhite);
+  clip-path: polygon(0 0, 100% 0%, 97% 100%, 3% 100%);
+  font-family: "CervoNeue Medium";
+  margin-top: 1rem;
+  font-size: 2em;
+}
+
+.secondary-text {
+  text-align: center;
+  color: var(--offWhite);
+  font-family: "Sumac Regular";
+  font-size: 2.5em;
+  line-height: 45px;
+  margin-top: 1rem;
+
+  text-shadow: 2px 3px 2px rgba(24, 24, 24, 0.439);
+  flex-grow: 1;
+}
+
+.secondary-text span {
+  font-family: "CervoNeue Medium Italic";
+  font-size: 0.7em;
+  text-shadow: none;
+}
+
+.building {
+  color: var(--offWhite);
+  text-decoration: underline;
+  font-family: "CervoNeue Regular";
+  padding-bottom: 3rem;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  bottom: 0;
+  padding: 2rem 3rem;
+  color: var(--offWhite);
+  font-family: "Garet Book";
+  font-size: 1.2em;
+}
+
+.socials div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.socials a:link,
+.socials a:visited {
+  height: 2rem;
+  color: var(--offWhite);
+  text-decoration: none;
+}
+
+.socials img {
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
+  .logo {
+    width: 50%;
+    object-fit: contain;
+    flex-grow: 0;
+    padding-top: 0;
+  }
+
+  .main-text {
+    font-size: 1.5em;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .secondary-text {
+    font-size: 2em;
+    letter-spacing: 1px;
+    line-height: 35px;
+    flex-grow: 0;
+  }
+
+  .socials {
+    position: static;
+  }
+
+  .building {
+    padding-bottom: 1rem;
+  }
+}
